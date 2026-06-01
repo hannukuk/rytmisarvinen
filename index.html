@@ -134,44 +134,57 @@
             <h2 class="section-title">Ota Yhteyttä & Pyydä Tarjous</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <form>
+<section id="yhteys">
+        <div class="container">
+            <h2 class="section-title">Ota Yhteyttä & Pyydä Tarjous</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        
+                        <input type="hidden" name="access_key" value="6b754afc-9556-4658-949b-bc5e41f843f6">
+                        
+                        <input type="hidden" name="subject" value="Uusi tarjouspyyntö Rytmisarvinen-sivustolta!">
+                        
+                        <input type="checkbox" name="botcheck" class="d-none">
+
                         <div class="row">
-                            <!-- Nimi -->
                             <div class="col-md-6 mb-3">
                                 <label for="name" class="form-label-custom">Nimi / Organisaatio *</label>
-                                <input type="text" class="form-control bg-custom-dark" id="name" required placeholder="Matti Meikäläinen">
+                                <input type="text" name="Nimi" class="form-control bg-custom-dark" id="name" required placeholder="Matti Meikäläinen">
                             </div>
-                            <!-- Sähköposti -->
                             <div class="col-md-6 mb-3">
                                 <label for="email" class="form-label-custom">Sähköposti *</label>
-                                <input type="email" class="form-control bg-custom-dark" id="email" required placeholder="matti@esimerkki.fi">
+                                <input type="email" name="Sahkoposti" class="form-control bg-custom-dark" id="email" required placeholder="matti@esimerkki.fi">
                             </div>
                         </div>
 
-                        <!-- Tapahtuman tyyppi (Uusi kenttä!) -->
                         <div class="mb-3">
                             <label for="event-type" class="form-label-custom">Minkälaiset bileet kyseessä?</label>
-                            <select class="form-select bg-custom-dark" id="event-type">
+                            <select name="Tapahtuman_tyyppi" class="form-select bg-custom-dark" id="event-type">
                                 <option value="" selected disabled>Valitse tapahtuma...</option>
-                                <option value="häät">Häät</option>
-                                <option value="synttärit">Syntymäpäivät / Yksityisjuhlat</option>
-                                <option value="yritys">Yritysjuhla / Pikkujoulut</option>
-                                <option value="festari">Festarit / Julkinen keikka</option>
-                                <option value="muu">Muu tilaisuus</option>
+                                <option value="Häät">Häät</option>
+                                <option value="Synttärit / Yksityisjuhlat">Syntymäpäivät / Yksityisjuhlat</option>
+                                <option value="Yritys / Pikkujoulut">Yritysjuhla / Pikkujoulut</option>
+                                <option value="Festari / Julkinen">Festarit / Julkinen keikka</option>
+                                <option value="Muu">Muu tilaisuus</option>
                             </select>
                         </div>
 
-                        <!-- Viesti -->
                         <div class="mb-3">
                             <label for="message" class="form-label-custom">Kerro lyhyesti tapahtumasta *</label>
-                            <textarea class="form-control bg-custom-dark" id="message" rows="5" required placeholder="Kerro meille esim. arvioitu päivämäärä, paikkakunta, juhlatila ja toiveet soittoajoista..."></textarea>
+                            <textarea name="Viesti" class="form-control bg-custom-dark" id="message" rows="5" required placeholder="Kerro meille esim. arvioitu päivämäärä, paikkakunta, juhlatila ja toiveet soittoajoista..."></textarea>
                         </div>
 
-                        <!-- Painike -->
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-custom-pink btn-lg w-100">Lähetä viesti sarvipäille</button>
                         </div>
                     </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
                 </div>
             </div>
         </div>
