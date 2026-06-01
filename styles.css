@@ -268,3 +268,14 @@ footer {
 .bg-custom-card .card-title {
     color: var(--gold) !important; /* Videon nimi loistaa kultaisena */
 }
+
+/* Parannetaan text-muted-luokan luettavuutta tummalla taustalla */
+.text-muted {
+    color: #a0a5b0 !important; /* Kirkkaampi, tyylikäs vaaleanharmaa */
+}
+
+/* Jos haluat säätää erikseen vain media-osion esittelytekstiä */
+#media .lead {
+    color: var(--text-light); /* Täysin valkoinen teksti */
+    opacity: 0.85; /* Hienovaraisesti pehmennetty */
+}
