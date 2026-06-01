@@ -1,0 +1,247 @@
+/* Rytmisarvinen - Custom Styles */
+
+:root {
+    --bg-dark: #0d0f12;
+    --gold: #d4af37;
+    --pink: #ff4081;
+    --text-light: #f8f9fa;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Navigaatiopalkki */
+.navbar {
+    background-color: rgba(13, 15, 18, 0.95) !important;
+    border-bottom: 2px solid var(--gold);
+    backdrop-filter: blur(5px);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--text-light) !important;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--pink) !important;
+}
+
+/* Työpöytäversio (Desktop): Kuva on taustana ja teksti päällä */
+.hero-section {
+    background: linear-gradient(rgba(13, 15, 18, 0.4), rgba(13, 15, 18, 0.85)), 
+                url('media/rytmisarvinen-hero-1.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 2;
+    padding: 40px 20px;
+}
+
+.hero-logo {
+    max-width: 180px;
+    width: 100%;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Bändi-osion logon tyylittely */
+.band-logo-wrapper {
+    padding: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.band-section-logo {
+    max-width: 350px; /* Sopiva koko tekstin rinnalle desktopilla */
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
+}
+
+/* Responsiivinen säätö mobiililaitteille, jotta teksti ei ole liian suurta kännykällä */
+@media (max-width: 768px) {
+.hero-section {
+        background: none; /* Poistetaan CSS-taustakuva mobiilissa */
+        min-height: auto; /* Sallitaan sivun venyä sisällön mukaan */
+        display: block;   /* Muutetaan block-elementiksi, jotta asiat pinoituvat päällekkäin */
+        text-align: center;
+        padding-top: 56px; /* Navigaatiopalkin vaatima tila ylhäällä */
+    }
+
+    /* Mobiilikuva täyttää leveyden ja säilyttää kuvasuhteen (bändi näkyy kokonaan) */
+    .hero-mobile-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-bottom: 3px solid var(--gold); /* Tyylikäs kultainen jakoviiva kuvan alle */
+    }
+
+    /* Tekstiosio siirtyy kuvan alapuolelle */
+    .hero-content {
+        padding: 40px 15px;
+        background-color: var(--bg-dark); /* Puhdas tumma tausta */
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        text-shadow: none; /* Ei tarvita enää varjoja puhtaalla taustalla */
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        text-shadow: none;
+    }
+
+    .hero-logo {
+        max-width: 120px;
+        margin-bottom: 15px;
+    }
+    .band-section-logo {
+        max-width: 260px; /* Hieman pienempi mobiilissa, jotta sivu pysyy tasapainossa */
+    }
+}
+
+/* Kustomoidut painikkeet bändin brändiväreillä */
+.btn-custom-gold {
+    background-color: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-gold:hover {
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px var(--gold);
+}
+
+.btn-custom-pink {
+    background-color: var(--pink);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-pink:hover {
+    background-color: #e91e63;
+    box-shadow: 0 0 15px var(--pink);
+    color: white;
+}
+
+/* Lomake-elementtien kustomointi tummaan teemaan sopivaksi */
+.form-control.bg-custom-dark {
+    background-color: #16191d;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control.bg-custom-dark:focus {
+    background-color: #1a1e24;
+    color: var(--text-light);
+    border-color: var(--pink);
+    box-shadow: 0 0 8px rgba(255, 64, 129, 0.25);
+}
+
+/* Yleiset osiomäärittelyt */
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    color: var(--gold);
+    font-size: 3rem;
+    margin-bottom: 45px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--pink);
+    margin: 10px auto 0 auto;
+}
+
+/* Keikkalistaus */
+.gig-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 0;
+    transition: background-color 0.2s ease;
+}
+
+.gig-item:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.gig-date {
+    color: var(--pink);
+    font-weight: 700;
+}
+
+footer {
+    background-color: #080a0c;
+}
+
+/* Media-osion kustomoinnit */
+#media {
+    background-color: var(--bg-dark);
+}
+
+.bg-custom-card {
+    background-color: #16191d;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Videokortit nousevat hieman ja saavat pinkin hehkun, kun hiiri viedään päälle */
+.bg-custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 64, 129, 0.2) !important;
+}
+
+.bg-custom-card iframe {
+    border: none;
+}
+
+.bg-custom-card .card-title {
+    color: var(--gold) !important; /* Videon nimi loistaa kultaisena */
+}
