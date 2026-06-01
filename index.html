@@ -127,24 +127,46 @@
         </div>
     </section>
 
+<!-- YHTEYSTIEDOT -->
     <section id="yhteys">
         <div class="container">
             <h2 class="section-title">Ota Yhteyttä & Pyydä Tarjous</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label fw-bold text-muted">Nimi / Organisaatio</label>
-                            <input type="text" class="form-control bg-custom-dark text-white" id="name" required>
+                        <div class="row">
+                            <!-- Nimi -->
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label-custom">Nimi / Organisaatio *</label>
+                                <input type="text" class="form-control bg-custom-dark" id="name" required placeholder="Matti Meikäläinen">
+                            </div>
+                            <!-- Sähköposti -->
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label-custom">Sähköposti *</label>
+                                <input type="email" class="form-control bg-custom-dark" id="email" required placeholder="matti@esimerkki.fi">
+                            </div>
                         </div>
+
+                        <!-- Tapahtuman tyyppi (Uusi kenttä!) -->
                         <div class="mb-3">
-                            <label for="email" class="form-label fw-bold text-muted">Sähköposti</label>
-                            <input type="email" class="form-control bg-custom-dark text-white" id="email" required>
+                            <label for="event-type" class="form-label-custom">Minkälaiset bileet kyseessä?</label>
+                            <select class="form-select bg-custom-dark" id="event-type">
+                                <option value="" selected disabled>Valitse tapahtuma...</option>
+                                <option value="häät">Häät</option>
+                                <option value="synttärit">Syntymäpäivät / Yksityisjuhlat</option>
+                                <option value="yritys">Yritysjuhla / Pikkujoulut</option>
+                                <option value="festari">Festarit / Julkinen keikka</option>
+                                <option value="muu">Muu tilaisuus</option>
+                            </select>
                         </div>
+
+                        <!-- Viesti -->
                         <div class="mb-3">
-                            <label for="message" class="form-label fw-bold text-muted">Kerro lyhyesti tapahtumasta (Päivämäärä, paikkakunta, toiveet...)</label>
-                            <textarea class="form-control bg-custom-dark text-white" id="message" rows="5" required></textarea>
+                            <label for="message" class="form-label-custom">Kerro lyhyesti tapahtumasta *</label>
+                            <textarea class="form-control bg-custom-dark" id="message" rows="5" required placeholder="Kerro meille esim. arvioitu päivämäärä, paikkakunta, juhlatila ja toiveet soittoajoista..."></textarea>
                         </div>
+
+                        <!-- Painike -->
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-custom-pink btn-lg w-100">Lähetä viesti sarvipäille</button>
                         </div>

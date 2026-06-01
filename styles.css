@@ -165,18 +165,41 @@ h1, h2, h3, .navbar-brand {
     color: white;
 }
 
-/* Lomake-elementtien kustomointi tummaan teemaan sopivaksi */
-.form-control.bg-custom-dark {
-    background-color: #16191d;
-    color: var(--text-light);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Lomake-elementtien kustomointi tummaan teemaan */
+.form-label-custom {
+    color: var(--gold); /* Muutetaan kenttien otsikot tyylikkään kultaisiksi */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
 }
 
-.form-control.bg-custom-dark:focus {
+.form-control.bg-custom-dark,
+.form-select.bg-custom-dark {
+    background-color: #16191d;
+    color: var(--text-light) !important; /* Varmistetaan, että kirjoitettu teksti on kirkkaan valkoista */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Kun käyttäjä klikkaa kenttään */
+.form-control.bg-custom-dark:focus,
+.form-select.bg-custom-dark:focus {
     background-color: #1a1e24;
     color: var(--text-light);
     border-color: var(--pink);
-    box-shadow: 0 0 8px rgba(255, 64, 129, 0.25);
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+}
+
+/* Korjaus alasvetovalikon nuolelle ja valinnan vaihtoehdoille tummassa teemassa */
+.form-select.bg-custom-dark {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23d4af37' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+.form-select.bg-custom-dark option {
+    background-color: #16191d;
+    color: var(--text-light);
 }
 
 /* Yleiset osiomäärittelyt */
