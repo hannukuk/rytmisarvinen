@@ -279,3 +279,14 @@ footer {
     color: var(--text-light); /* Täysin valkoinen teksti */
     opacity: 0.85; /* Hienovaraisesti pehmennetty */
 }
+
+/* Kustomoidut placeholder-tekstit vaaleammaksi kaikille selaimille */
+.form-control.bg-custom-dark::placeholder {
+    color: #8a909d !important;
+    opacity: 1; /* Varmistaa, että Firefox ei haalenna tekstiä liikaa */
+}
+
+/* Valinnaisesti: Kun käyttäjä klikkaa kenttään, placeholder voi muuttua vielä hieman vaaleammaksi */
+.form-control.bg-custom-dark:focus::placeholder {
+    color: #a0a6b5 !important;
+}
